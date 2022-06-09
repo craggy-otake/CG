@@ -92,7 +92,7 @@ var num = 0;
       update_position();
     }
     num += 1
-    if (num > 100) {
+    if (num > 3) {
         flag = false;
     }
   }
@@ -253,6 +253,12 @@ function init() {
           <li>Selected Linkage: <input type="number" id="input_selected" step="1" min="0" value="0"></li>
           <li>Selected Linkage's Angle: <input type="number" id="input_angle" step="5" value="0"></li>
           <li><input type="checkbox" id="input_ikmode"> IK Mode (otherwise FK)</li>
+          <h3>考察感想:</h3>
+          <ul>
+          <li>今回、目標の解は幾つも考えられるが、何となく「元の値と近い角度の解」になると(UIとして)良いという直感がある。</li>
+          <li>現在、角度が180程いきなり変わってしまうことがある。</li>
+          <li>これを自分の願う直感に近づけるためには、角度が大きく変わることに罰則を与えることなどがある。</li>
+          </ul>
           <li>Usage:</li>
           <ul>
               <li>Drag: Perform IK</li>
